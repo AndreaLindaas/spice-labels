@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import SpiceLabel from "./_components/SpiceLabel/SpiceLabel";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 export default function Home() {
   const [value, setValue] = useState(0);
   const [confirmedNumberOfLabels, setConfirmedNumberOfLabels] = useState(4);
@@ -24,7 +24,7 @@ export default function Home() {
   };
   return (
     <>
-      <form onSubmit={numberOfLabels}>
+      <form onSubmit={numberOfLabels} className={styles.form}>
         <div>
           <label htmlFor="number">Number of labels</label>
         </div>

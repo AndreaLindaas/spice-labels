@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import styles from "./SpiceLabel.module.css";
-export default function SpiceLabel() {
+import styles from "./SpiceLabel.module.scss";
+
+type SpiceLabelProps = {
+  dark?: boolean;
+};
+
+export default function SpiceLabel(props: SpiceLabelProps) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
-
+  console.log(props);
   return (
     <div>
       <div className={styles.label}>
