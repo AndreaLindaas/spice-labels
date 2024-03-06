@@ -1,0 +1,7 @@
+.label {
+  height: 200px;
+  width: 100px;
+  border: solid 1px #000;
+  background: #000;
+  color: #fff;
+}
