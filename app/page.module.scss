@@ -1,5 +1,6 @@
 .form {
   text-align: center;
+  margin: 50px;
   input {
     margin: 10px 0;
   }
@@ -8,4 +9,5 @@
   display: flex;
   gap: 50px;
   justify-content: center;
+  flex-wrap: wrap;
 }

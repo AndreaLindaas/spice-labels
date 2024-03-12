@@ -8,12 +8,16 @@ type SpiceLabelProps = {
 export default function SpiceLabel(props: SpiceLabelProps) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       <div className={styles.label}>
-        <p>{title}</p>
-        <p></p>
+        <div className={styles.whiteSquare}>
+          <p>{title}</p>
+          <div className={` ${subTitle && styles.hasText}`}>
+            <p>{subTitle}</p>
+          </div>
+        </div>
       </div>
       <div>
         <label htmlFor="">Title</label>
@@ -21,7 +25,16 @@ export default function SpiceLabel(props: SpiceLabelProps) {
       <div>
         <input
           type="text"
-          onChange={(e: any) => setTitle(e.target.value)}
+          onChange={(e: any) => setTitle(e.target.value.toUpperCase())}
+        ></input>
+      </div>
+      <div>
+        <label htmlFor="">Sub title</label>
+      </div>
+      <div>
+        <input
+          type="text"
+          onChange={(e: any) => setSubTitle(e.target.value)}
         ></input>
       </div>
     </div>

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import SpiceLabel from "./_components/SpiceLabel/SpiceLabel";
 import styles from "./page.module.scss";
+import Nav from "./_components/Nav/Nav";
 export default function Home() {
   const [value, setValue] = useState(0);
   const [confirmedNumberOfLabels, setConfirmedNumberOfLabels] = useState(4);
@@ -24,6 +25,7 @@ export default function Home() {
   };
   return (
     <>
+      <Nav />
       <form onSubmit={numberOfLabels} className={styles.form}>
         <div>
           <label htmlFor="number">Number of labels</label>

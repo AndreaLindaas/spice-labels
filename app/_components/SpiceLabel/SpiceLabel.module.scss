@@ -4,7 +4,23 @@
   border: solid 1px #000;
   background: #000;
   color: #fff;
+
+  .whiteSquare {
+    border: 1px solid #fff;
+    width: 130px;
+    margin: 8px auto;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hasText {
+    border-top: 1px solid #fff;
+    width: 100px;
+    margin: 0 auto;
+  }
   p {
     text-align: center;
+    margin: 5px 0;
   }
 }
