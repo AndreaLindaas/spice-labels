@@ -1,18 +1,22 @@
 .label {
-  height: 250px;
   width: 150px;
   border: solid 1px #000;
   background: #000;
   color: #fff;
+  margin-bottom: 30px;
 
+  // .whiteSquare {
+  //   border: 1px solid #fff;
+  //   width: 130px;
+  //   margin: 8px auto;
+  //   height: 230px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  // }
   .whiteSquare {
     border: 1px solid #fff;
-    width: 130px;
-    margin: 8px auto;
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 5px;
   }
   .hasText {
     border-top: 1px solid #fff;
@@ -22,5 +26,10 @@
   p {
     text-align: center;
     margin: 5px 0;
+  }
+}
+.container {
+  input {
+    margin-bottom: 20px;
   }
 }
