@@ -3,7 +3,7 @@ import styles from "./SpiceLabel.module.scss";
 import { cmToPx } from "@/app/_lib/utils";
 
 type SpiceLabelProps = {
-  dark?: boolean;
+  white?: boolean;
   width: number;
   height: number;
 };
@@ -12,17 +12,16 @@ export default function SpiceLabel(props: SpiceLabelProps) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
 
-  const { height, width } = props;
+  const { height, width, white } = props;
 
   const heightInPx = cmToPx(height);
   const widthInPx = cmToPx(width);
-  console.log(heightInPx);
 
   return (
     <div>
       <div
         style={{ height: heightInPx, width: widthInPx }}
-        className={styles.label}
+        className={`${styles.label} ${white ? styles.white : ""}`}
       >
         <div
           className={styles.whiteSquare}

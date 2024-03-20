@@ -8,6 +8,7 @@ export default function Home() {
   const [confirmedNumberOfLabels, setConfirmedNumberOfLabels] = useState(4);
   const [width, setWidth] = useState(3);
   const [height, setHeight] = useState(4);
+  const [isWhite, setIsWhite] = useState(false);
 
   const numberOfLabelsOnSubmit = (event: any) => {
     event.preventDefault();
@@ -21,15 +22,21 @@ export default function Home() {
   const showLabels = () => {
     const labels = [];
     for (let i = 0; i < confirmedNumberOfLabels; i++) {
-      labels.push(<SpiceLabel width={width} height={height} key={i} />);
+      labels.push(
+        <SpiceLabel white={isWhite} width={width} height={height} key={i} />
+      );
     }
     return labels;
+  };
+
+  const changeColor = (event: any) => {
+    setIsWhite(event.target.checked);
   };
   return (
     <>
       <form onSubmit={numberOfLabelsOnSubmit} className={styles.form}>
         <div>
-          <label htmlFor="number">Number of labels</label>
+          <h4> Choose your number of labels and size.</h4>
         </div>
         <input
           type="number"
@@ -54,6 +61,10 @@ export default function Home() {
             value={height}
             onChange={(e: any) => setHeight(Number(e.target.value))}
           />
+        </label>
+        <label>
+          White
+          <input type="checkbox" onChange={changeColor} />
         </label>
 
         <div>
