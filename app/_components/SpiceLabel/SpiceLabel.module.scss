@@ -1,40 +1,58 @@
-.label {
-  width: 150px;
-  border: dashed 1px #000;
-  background: #000;
-  color: #fff;
-  margin-bottom: 30px;
+.spiceLabelContainer {
+  background: #eeeeee;
+  border-radius: 6px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .label {
+    width: 150px;
+    border: dashed 1px #000;
+    background: #000;
+    color: #fff;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  &.white {
-    background: #fff;
-    color: #000;
+    &.white {
+      background: #fff;
+      color: #000;
+
+      .whiteSquare {
+        border: 1px solid #000;
+        width: 100%;
+      }
+      .hasText {
+        border-top: 1px solid #000;
+      }
+    }
 
     .whiteSquare {
-      border: 1px solid #000;
+      border: 1px solid #fff;
+      margin: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
     }
     .hasText {
-      border-top: 1px solid #000;
+      border-top: 1px solid #fff;
+      width: 100px;
+      margin: 0 auto;
+    }
+    p {
+      text-align: center;
+      margin: 5px 0;
     }
   }
-
-  .whiteSquare {
-    border: 1px solid #fff;
-    margin: 5px;
+}
+.inputContainer {
+  > div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
-  .hasText {
-    border-top: 1px solid #fff;
-    width: 100px;
-    margin: 0 auto;
-  }
-  p {
-    text-align: center;
-    margin: 5px 0;
-  }
-}
-.container {
   input {
     margin-bottom: 20px;
   }

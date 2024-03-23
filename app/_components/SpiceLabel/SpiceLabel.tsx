@@ -3,29 +3,31 @@ import styles from "./SpiceLabel.module.scss";
 import { cmToPx } from "@/app/_lib/utils";
 
 type SpiceLabelProps = {
+  border?: boolean;
   white?: boolean;
   width: number;
   height: number;
+  textSize: number;
 };
 
 export default function SpiceLabel(props: SpiceLabelProps) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
 
-  const { height, width, white } = props;
+  const { height, width, white, border, textSize } = props;
 
   const heightInPx = cmToPx(height);
   const widthInPx = cmToPx(width);
 
   return (
-    <div>
+    <div className={styles.spiceLabelContainer}>
       <div
-        style={{ height: heightInPx, width: widthInPx }}
+        style={{ height: heightInPx, width: widthInPx, fontSize: textSize }}
         className={`${styles.label} ${white ? styles.white : ""}`}
       >
         <div
-          className={styles.whiteSquare}
-          style={{ height: heightInPx - 10 - 2 }} //10px er 5px margin oppe, 5px margin nede. 2px er 1px border oppe og 1px border nede.
+          className={`${border ? styles.whiteSquare : ""}`}
+          style={{ height: border ? heightInPx - 10 - 2 : "auto" }} //10px er 5px margin oppe, 5px margin nede. 2px er 1px border oppe og 1px border nede.
         >
           <p>{title}</p>
           <div className={` ${subTitle && styles.hasText}`}>
@@ -33,20 +35,17 @@ export default function SpiceLabel(props: SpiceLabelProps) {
           </div>
         </div>
       </div>
-      <div className={styles.container}>
+      <div className={styles.inputContainer}>
         <div>
-          <label htmlFor="">Title</label>
-        </div>
-        <div>
+          <label>Title</label>
           <input
             type="text"
             onChange={(e: any) => setTitle(e.target.value.toUpperCase())}
           ></input>
         </div>
+
         <div>
-          <label htmlFor="">Sub title</label>
-        </div>
-        <div>
+          <label>Subtitle</label>
           <input
             type="text"
             onChange={(e: any) => setSubTitle(e.target.value)}

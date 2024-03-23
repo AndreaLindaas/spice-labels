@@ -1,0 +1,38 @@
+.form {
+  text-align: center;
+  margin: 50px;
+  .filterContainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    .inputContainer {
+      display: grid;
+      grid-template-columns: 135px 80px;
+      text-align: left;
+      margin-bottom: 10px;
+
+      input {
+        padding: 6px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+  button {
+    margin: 20px 10px 10px 10px;
+    padding: 11px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+  }
+}
+.labelsContainer {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
