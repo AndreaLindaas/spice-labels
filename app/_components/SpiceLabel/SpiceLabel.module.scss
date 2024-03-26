@@ -57,3 +57,14 @@
     margin-bottom: 20px;
   }
 }
+@media print {
+  .spiceLabelContainer {
+    background-color: #fff;
+    .label {
+      margin-bottom: 0;
+    }
+  }
+  .inputContainer {
+    display: none;
+  }
+}

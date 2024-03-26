@@ -36,3 +36,9 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+@media print {
+  .form {
+    display: none;
+  }
+}
