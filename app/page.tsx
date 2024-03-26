@@ -3,10 +3,10 @@ import { useState } from "react";
 import SpiceLabel from "./_components/SpiceLabel/SpiceLabel";
 import styles from "./Home.module.scss";
 export default function Home() {
-  const [numberOfLabels, setNumberOfLabels] = useState(1);
-  const [confirmedNumberOfLabels, setConfirmedNumberOfLabels] = useState(1);
+  const [numberOfLabels, setNumberOfLabels] = useState(0);
+  const [confirmedNumberOfLabels, setConfirmedNumberOfLabels] = useState(0);
   const [width, setWidth] = useState(6);
-  const [height, setHeight] = useState(8);
+  const [height, setHeight] = useState(10);
   const [isWhite, setIsWhite] = useState(false);
   const [isBorder, setIsBorder] = useState(false);
   const [textSize, setTextSize] = useState(14);
@@ -21,6 +21,9 @@ export default function Home() {
   };
 
   const showLabels = () => {
+    if (confirmedNumberOfLabels == 0) {
+      return <p>Enter number of spice labels and click generate</p>;
+    }
     const labels = [];
     for (let i = 0; i < confirmedNumberOfLabels; i++) {
       labels.push(
@@ -53,6 +56,7 @@ export default function Home() {
               <label># of labels</label>
               <input
                 type="number"
+                min="0"
                 name="number"
                 value={numberOfLabels}
                 onChange={handleChange}
@@ -60,18 +64,20 @@ export default function Home() {
               />
             </div>
             <div className={styles.inputContainer}>
-              <label>Width (cm)</label>
+              <label>Width</label>
               <input
                 type="number"
+                min="0"
                 name="width"
                 value={width}
                 onChange={(e: any) => setWidth(Number(e.target.value))}
               />
             </div>
             <div className={styles.inputContainer}>
-              <label>Height (cm)</label>
+              <label>Height</label>
               <input
                 type="number"
+                min="0"
                 name="height"
                 value={height}
                 onChange={(e: any) => setHeight(Number(e.target.value))}
@@ -92,6 +98,7 @@ export default function Home() {
               <input
                 value={textSize}
                 type="number"
+                min="0"
                 onChange={(e: any) => setTextSize(Number(e.target.value))}
               />
             </div>

@@ -30,7 +30,10 @@ export default function SpiceLabel(props: SpiceLabelProps) {
           style={{ height: border ? heightInPx - 10 - 2 : "auto" }} //10px er 5px margin oppe, 5px margin nede. 2px er 1px border oppe og 1px border nede.
         >
           <p>{title}</p>
-          <div className={` ${subTitle && styles.hasText}`}>
+          <div
+            className={` ${subTitle && styles.hasText}`}
+            style={{ fontSize: textSize - 2 }}
+          >
             <p>{subTitle}</p>
           </div>
         </div>
