@@ -10,7 +10,7 @@ export default function About() {
       <article className={styles.textContainer}>
         <h2>About Spice Labels</h2>
         <p>
-          Introducing Spice Labels – the ultimate solution for organizing your
+          Introducing Spice Labels - the ultimate solution for organizing your
           spice collection. Spice Labels allows you to create personalized spice
           labels quickly and easily, ensuring your kitchen stays organized and
           stylish.
@@ -21,7 +21,7 @@ export default function About() {
         <p>
           With Spice Labels intuitive interface, designing spice labels is a
           breeze. Simply choose your preferred template, customize with spice
-          names and styles, and print – it's that easy!
+          names and styles, and print - its that easy!
         </p>
 
         <h3> Customization Options</h3>
@@ -44,7 +44,7 @@ export default function About() {
 
         <p>
           Best of all, Spice Labels is completely free to use. Say goodbye to
-          expensive label-making software – Spice Labels saves you time and
+          expensive label-making software - Spice Labels saves you time and
           money.
         </p>
 
@@ -53,14 +53,14 @@ export default function About() {
         <p>
           Keep your spice collection tidy and easy to navigate with
           professionally designed labels. Say goodbye to rummaging through
-          drawers – Spice Labels ensures every spice is at your fingertips.
+          drawers - Spice Labels ensures every spice is at your fingertips.
         </p>
 
         <h3> Get Started Today!</h3>
 
         <p>
           Join the thousands of users who trust Spice Labels to keep their
-          kitchen organized. Say hello to a clutter-free cooking experience –
+          kitchen organized. Say hello to a clutter-free cooking experience -
           try Spice Labels now!
         </p>
       </article>
