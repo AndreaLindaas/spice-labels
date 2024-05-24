@@ -3,10 +3,10 @@ import { useState } from "react";
 import SpiceLabel from "./_components/SpiceLabel/SpiceLabel";
 import styles from "./Home.module.scss";
 export default function Home() {
-  const [numberOfLabels, setNumberOfLabels] = useState(0);
+  const [numberOfLabels, setNumberOfLabels] = useState(1);
   const [confirmedNumberOfLabels, setConfirmedNumberOfLabels] = useState(0);
-  const [width, setWidth] = useState(6);
-  const [height, setHeight] = useState(10);
+  const [width, setWidth] = useState(4);
+  const [height, setHeight] = useState(5);
   const [isWhite, setIsWhite] = useState(false);
   const [isBorder, setIsBorder] = useState(false);
   const [textSize, setTextSize] = useState(14);
@@ -64,7 +64,7 @@ export default function Home() {
               />
             </div>
             <div className={styles.inputContainer}>
-              <label>Width</label>
+              <label>Width (cm)</label>
               <input
                 type="number"
                 min="0"
@@ -74,7 +74,7 @@ export default function Home() {
               />
             </div>
             <div className={styles.inputContainer}>
-              <label>Height</label>
+              <label>Height (cm)</label>
               <input
                 type="number"
                 min="0"

@@ -1,33 +1,46 @@
 .spiceLabelContainer {
-  background: #eeeeee;
+  background-image: url("/spicejar.png");
+  background-repeat: no-repeat;
   border-radius: 6px;
-  padding: 14px 18px;
-  box-sizing: border-box;
+  min-height: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  .label {
-    width: 150px;
-    border: dashed 1px #000;
-    background: #000;
-    color: #fff;
-    margin-bottom: 30px;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 40px 10px 0px 10px;
+  background-size: 100% 100%;
+  background-position-y: -25px;
+
+  .spiceLabelInnerContainer {
+    padding: 14px 18px;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    &.white {
-      background: #fff;
-      color: #000;
+    .label {
+      width: 150px;
+      border: dashed 1px #000;
+      background: #000;
+      color: #fff;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      .whiteSquare {
-        border: 1px solid #000;
-        width: 100%;
-      }
-      .hasText {
-        border-top: 1px solid #000;
+      &.white {
+        background: #fff;
+        color: #000;
+
+        .whiteSquare {
+          border: 1px solid #000;
+          width: 100%;
+        }
+        .hasText {
+          border-top: 1px solid #000;
+        }
       }
     }
+    //background: #eeeeee;
 
     .whiteSquare {
       border: 1px solid #fff;
