@@ -1,20 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Introduction
 
-## Getting Started
+A simple web app that creates labels for spice jars. Simple adjustments such as size and color can be changed.
+The application is built on Next.js and SCSS modules. The app runs on Netlify.
 
-First, run the development server:
+### Run locally
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1.            git clone https://github.com/AndreaLindaas/spice-labels.git
+2.            cd spice-labels
+3.            npm install
+4.            npm run dev
+5.            Visit http://localhost:3000/
 
 ## Production
 
