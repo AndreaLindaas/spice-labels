@@ -20,21 +20,25 @@ export default function SpiceLabel(props: SpiceLabelProps) {
   const widthInPx = cmToPx(width);
 
   return (
-    <div className={styles.spiceLabelContainer}>
-      <div
-        style={{ height: heightInPx, width: widthInPx, fontSize: textSize }}
-        className={`${styles.label} ${white ? styles.white : ""}`}
-      >
-        <div
-          className={`${border ? styles.whiteSquare : ""}`}
-          style={{ height: border ? heightInPx - 10 - 2 : "auto" }} //10px er 5px margin oppe, 5px margin nede. 2px er 1px border oppe og 1px border nede.
-        >
-          <p>{title}</p>
+    <div>
+      <div className={styles.spiceLabelContainer}>
+        <div className={styles.spiceLabelInnerContainer}>
           <div
-            className={` ${subTitle && styles.hasText}`}
-            style={{ fontSize: textSize - 2 }}
+            style={{ height: heightInPx, width: widthInPx, fontSize: textSize }}
+            className={`${styles.label} ${white ? styles.white : ""}`}
           >
-            <p>{subTitle}</p>
+            <div
+              className={`${border ? styles.whiteSquare : ""}`}
+              style={{ height: border ? heightInPx - 10 - 2 : "auto" }} //10px er 5px margin oppe, 5px margin nede. 2px er 1px border oppe og 1px border nede.
+            >
+              <p>{title}</p>
+              <div
+                className={` ${subTitle && styles.hasText}`}
+                style={{ fontSize: textSize - 2 }}
+              >
+                <p>{subTitle}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

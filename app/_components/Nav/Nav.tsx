@@ -5,7 +5,11 @@ export default function Nav() {
   return (
     <>
       <nav className={Styles.nav}>
-        <h1>Spice labels</h1>
+        <div className={Styles.logo}>
+          <img src="/spicejar.png" alt="Spice jar" />
+          <h1>Spice labels</h1>
+        </div>
+
         <ul className={Styles.navList}>
           <Link href="/">
             <li>Home</li>
